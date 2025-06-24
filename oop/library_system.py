@@ -24,12 +24,21 @@ class PrintBook(Book):
         return  2
 class Library():
     def __init__(self):
-        self.book_list = []
+        self.books = []
     def add_book(self,book):
-        self.book_list.append(book)
-        if book.type == 1 :
-            print(f"Book: {book.title} by {book.author}")
-        if book.type == 2 :
-            print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}")
-        if book.type == 1 :
-            print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+        self.books.append(book)
+        # if book.type == 1 :
+        #     print(f"Book: {book.title} by {book.author}")
+        # if book.type == 2 :
+        #     print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}")
+        # if book.type == 1 :
+        #     print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+    def list_books(self):
+        for book in self.books :
+            if book.type == 1 :
+                print(f"Book: {book.title} by {book.author}")
+            if book.type == 2 :
+                print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}")
+            if book.type == 1 :
+                print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
+
